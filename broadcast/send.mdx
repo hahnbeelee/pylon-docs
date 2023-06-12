@@ -1,0 +1,139 @@
+---
+title: "Create a Broadcast"
+icon: "pen-to-square"
+---
+
+<Warning>
+  Always [Send a Preview](#sending-the-broadcast) before sending a Broadcast to
+  ensure correct formatting.
+</Warning>
+
+## Go to the Broadcast Page
+
+Navigate to the [Broadcasts Page](https://app.usepylon.com/broadcast) and click the `Create` button at the top right.
+
+<Frame>
+  <img src="/images/create-broadcast-empty-modal.png" />
+</Frame>
+
+## Set a Title
+
+The title will not be sent to the channels, it's only for you to sort through sent Broadcasts later.
+
+## Write your Message
+
+Slack message etiquette is very different from other mediums like Email. When writing your Broadcast, follow the following tips:
+
+1. Keep it Short
+2. Use Emojis
+3. Attach an Image or Link
+
+<Tip>See some pre-written messages on our [Examples Page](/examples).</Tip>
+
+Type your message into the text editor on the left, and see a preview of the message on the right. We currently support the following message content types:
+
+| Content                      | Notes                                                                                                        | Keyboard Shortcut |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------ | ----------------- |
+| **Bold**                     | Bold the text                                                                                                | ⌘B                |
+| _Italic_                     | Italicize the text                                                                                           | ⌘I                |
+| `Code`                       | Add code formatting                                                                                          |                   |
+| [Link](https://usepylon.com) | Add a link whose image can optionally be unfurled                                                            |                   |
+| Emoji 🙂                     | Add an emoji                                                                                                 | 🌐                |
+| Strikethrough                | Strikethrough text                                                                                           |                   |
+| Header                       | Add a header                                                                                                 |                   |
+| Subheader                    | Add a subheader                                                                                              |                   |
+| Image                        | Add an image                                                                                                 |                   |
+| `{{account.name}}`           | This will insert the personalized Account Name of the company into the message                               |                   |
+| `{{slack.pylon.mention}}`    | This will tag the Pylon bot into the message. Useful when enabling Pylon and broadcasting usage instructions |                   |
+
+<Tip>
+  Emojis can be added either as raw emojis like 🎉 or raw string form like
+  `:tada:`. Custom emojis are supported via the latter method like
+  `:custom_emoji:`.
+</Tip>
+
+### Show or Hide Link Preview
+
+When you send links on Slack, a link preview image is typically shown below your messsage. You can manually enable or disable this preview after adding a link to the message.
+
+<Frame>
+  <img src="/images/create-broadcast-link.png" />
+</Frame>
+
+<Frame caption="The Link Preview is everything to the right of the grey bar under main message">
+  <img src="/images/create-broadcast-link-preview.png" />
+</Frame>
+
+## Choose Sender
+
+You can choose to send the broadcast either as yourself or the company.
+
+<Frame>
+  <img src="/images/create-broadcast-send-as.png" />
+</Frame>
+
+## Select your Audience
+
+A preview of what Slack channels your Broadcast will be sent to is always visible on the right under the Message Preview. There are two top-level filters you can use to choose who to send a broadcast to based on:
+
+1. Account Ownership
+2. Channel Tags
+
+<Frame>
+  <img src="/images/create-broadcast-audience.png" />
+</Frame>
+
+### Account Ownership
+
+The first audience filter is choosing to send to `All Accounts` vs `Your Accounts`. You own an account if you are the `Account Owner`. You can see and edit this information on the [Accounts Page](https://app.usepylon.com/accounts).
+
+### Channel Tags
+
+You can choose to send a Broadcast to only channels that have a certain tag. Tags can either be set in Pylon on the [Accounts Page](https://app.usepylon.com/accounts) or come from your CRM. [Connect your CRM](#).
+
+<Frame>
+  <img src="/images/create-broadcast-tags.png" />
+</Frame>
+
+### Deselect a Channel
+
+There may be instances where you want to send to all channels that have a tag, except for some. To achieve this, first filter by the channel tag, then click on the channel on the right under the preview message.
+
+<Frame>
+  <img src="/images/create-broadcast-delete.png" />
+</Frame>
+
+## Engagement Notifications
+
+After sending your Broadcast, Pylon will live track all engagements on your messages across all channels including link clicks, reactions, and replies. These can be viewed in Pylon, or made easily visible in Slack for others to see as well.
+
+<Frame>
+  <img src="/images/create-broadcast-engagement.png" />
+</Frame>
+
+You can select to have a feed of engagement notifications to be sent to you or to a public channel for others to see as well.
+
+<Frame caption="What the engagement notifications look like in Slack">
+  <img src="/images/create-broadcast-engagement-slack.png" />
+</Frame>
+
+## Sending the Broadcast
+
+<Warning>
+  Always send a preview before sending a Broadcast to ensure the message sends
+  with correct formatting. Broadcasts cannot be unsent.
+</Warning>
+
+### Send a Preview
+
+Once your message is ready to be sent, send a preview by clicking the `Send Preview` Button at the bottom of the modal, to the left of the `Send Button`. You'll be able to select whether to send the preview to yourself or to a channel.
+
+<Frame>
+  <img src="/images/create-broadcast-preview-modal.png" />
+</Frame>
+
+### Final Send
+
+If your preview looks good, click the `Send` button next to the `Send Preview` bottom. You'll get a confirmation before the Broadcast gets sent.
+
+<Check>Congrats, you've sent a Broadcast!</Check>

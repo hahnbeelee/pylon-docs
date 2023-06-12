@@ -27,15 +27,40 @@
   },
   "anchors": [
     {
+      "name": "Website",
+      "url": "https://usepylon.com",
+      "icon": "globe"
+    },
+    {
       "name": "Security",
-      "url": "https://drive.google.com/file/d/1IcT6Av_2lCee9V_6sbLNPeFxSZfI3kmH/view",
+      "url": "https://usepylon.com/security.pdf",
       "icon": "shield-halved"
+    },
+    {
+      "name": "Privacy Policy",
+      "url": "https://usepylon.com/privacy.pdf",
+      "icon": "magnifying-glass"
+    },
+    {
+      "name": "Terms & Conditions",
+      "url": "https://usepylon.com/terms.pdf",
+      "icon": "file"
     }
   ],
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
+      "pages": ["get-started/introduction", "get-started/quickstart", "get-started/development"]
+    },    
+
+
+    {
+      "group": "CRM Sync",
+      "pages": ["crm/overview"]
+    },
+    {
+      "group": "Broadcast",
+      "pages": ["broadcast/overview", "broadcast/send", "broadcast/analytics", "broadcast/view-all"]
     },
     {
       "group": "Essentials",
@@ -43,7 +68,6 @@
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/usepylon",
     "linkedin": "https://www.linkedin.com/company/usepylon"
   }
 }
