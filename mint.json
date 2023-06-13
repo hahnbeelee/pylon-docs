@@ -49,22 +49,12 @@
   ],
   "navigation": [
     {
-      "group": "Get Started",
-      "pages": ["get-started/introduction", "get-started/quickstart", "get-started/development"]
-    },    
-
-
-    {
       "group": "CRM Sync",
-      "pages": ["crm/overview"]
+      "pages": ["crm/overview", "crm/salesforce"]
     },
     {
       "group": "Broadcast",
       "pages": ["broadcast/overview", "broadcast/send", "broadcast/analytics", "broadcast/view-all"]
-    },
-    {
-      "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
     }
   ],
   "footerSocials": {

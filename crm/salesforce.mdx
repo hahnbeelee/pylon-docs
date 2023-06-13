@@ -1,0 +1,95 @@
+---
+title: "Salesforce"
+description: "Features & Setup"
+icon: "salesforce"
+---
+
+## Features
+
+### Activity Sync
+
+Everyday, Pylon scans your customer channels for conversations that were had.
+For every conversation, we use AI to summarize the details, and sync the summary
+to the relevant `Account` in your CRM.
+
+<Frame>
+  <img src="/images/sfdc-activity.png" />
+</Frame>
+
+### Contact Sync
+
+When someone new joins a prospect or customer channel, we add that contact to
+your CRM and link it to the relevant `Account`.
+
+<Frame>
+  <img src="/images/sfdc-contact.png" />
+</Frame>
+
+### Channel Creation from Salesforce
+
+You can greatly simplify Slack channel creation using our Salesforce widget.
+Click `Create Slack Channel` from Salesforce, name the channel, and the
+following will automatically happen:
+
+1. Channel will be created and named
+2. All `Opportunity` `Contact Roles` will be invited to join the channel
+3. Pylon will be enabled within the channel
+4. `Invitees` from the customer side will be sent a `Welcome Message` once they
+   join the channel
+
+<Frame>
+  <img src="/images/sfdc-create-channel.png" />
+</Frame>
+
+<Frame>
+  <img src="/images/sfdc-create-channel-2.png" />
+</Frame>
+
+### Broadcast Filtering
+
+You may want to send a Broadcast to a set of customers based on data stored in
+Salesforce.
+
+<Frame>
+  <img src="/images/sfdc-broadcast.png" />
+</Frame>
+
+### Ticketing
+
+View and filter `Issues` by Salesforce tags.
+
+<Frame>
+  <img src="/images/sfdc-ticketing.png" />
+</Frame>
+
+## Setup
+
+<Note>You'll need a Salesforce administrator to complete the setup.</Note>
+
+<Tip>
+  If you already have the Salesforce Service Integration installed, you can
+  simply hit `Connect` under Salesforce on the [Integrations
+  Page](https://app.usepylon.com/integrations).
+</Tip>
+
+1. Send the Pylon team your Salesforce subdomain in our shared Slack channel.
+   You can find your subdomain in your Salesforce URL
+   `https://{subdomain}.salesforce.com`.
+2. Visit the [Integrations Page](https://app.usepylon.com/integrations) and hit
+   `Connect` under Salesforce
+
+<Frame>
+  <img src="/images/sfdc-install.png" />
+</Frame>
+3. Click `Authorize` on the Salesforce Authorization Page
+
+4. Click `Manage` on the Salesforce Integration and Confirm the User Mapping is
+   set correctly. The User Mapping allows us map Salesforce Users to Slack Users
+
+<Frame>
+  <img src="/images/sfdc-user-mapping.png" />
+</Frame>
+
+All done!
+
+<Check>You've setup our Salesforce Integration</Check>
