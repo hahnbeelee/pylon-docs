@@ -6,6 +6,10 @@
     "light": "/logo/light.svg"
   },
   "favicon": "/favicon.png",
+  "modeToggle": {
+    "default": "light",
+    "isHidden": false
+  },
   "colors": {
     "primary": "#3730a3",
     "light": "#6366F1",
@@ -50,7 +54,7 @@
   "navigation": [
     {
       "group": "CRM Sync",
-      "pages": ["crm/overview", { "group": "Salesforce", "pages": ["crm/salesforce/setup", "crm/salesforce/features"]}]
+      "pages": ["crm/overview", { "group": "Salesforce", "pages": ["crm/salesforce/setup", "crm/salesforce/features"]},{ "group": "Hubspot", "pages": ["crm/hubspot/setup", "crm/hubspot/features"]}]
     },
     {
       "group": "Broadcast",
