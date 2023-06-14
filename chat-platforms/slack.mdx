@@ -1,0 +1,130 @@
+---
+title: "The Basics"
+description: "Manage your Customer Conversations"
+icon: "circle-info"
+---
+
+<Tip>
+  If you find yourself losing track of customer messages, not responding
+  quickly, or needing analytics on your customer conversations, it's time to
+  start using Pylon's ticketing.
+</Tip>
+
+Pylon's ticketing system gives GTM teams structure around their customer
+conversations.
+
+All customer messages are captured and grouped into units of `Conversation`. For
+example, if two messages come in from a customer about the same topic, we
+automatically group them together.
+
+Each conversation has a status of `Open`, `In Progress`, or `Closed`.
+
+Conversations can be viewed and handled directly in Slack via
+[Triage Channels](triage-channel) or from the [Kanban Board](kanban).
+
+Account Executives and Customer Success Managers typically have their own
+`Triage Channels` where they can track conversations related only to their own
+`Accounts`.
+
+Conversational tickets are completely invisible to a customer, unless you
+explicitly connect a conversation to a support tool like `Zendesk`, `Intercom`,
+or `Salesforce Service`.
+
+Conversations are created out of all customer Slack messages, including use
+cases like:
+
+<CardGroup cols={1}>
+  <Card title="Support Questions" icon="bug" color="#ea5a0c">
+    Either traige support questions directly or deflect them to a Support Team
+    like Zendesk, while still allowing the customer to stay in Slack and for you
+    to retain visibility.
+  </Card>
+  <Card title="Relationship Building" icon="handshake" color="#0285c7">
+    Make sure you have good visibility on your customer asks, and always know
+    what you need to respond to.
+  </Card>
+  <Card title="Sales Conversations" icon="money-bills" color="#16a34a">
+    Sales conversations are time-sensitive. Leverage our SLA monitoring to make
+    sure you respond promptly.
+  </Card>
+  <Card title="Product Feedback" icon="comments" color="#dc2626">
+    Engage the rest of your team on feedback from prospects or customers.
+  </Card>
+</CardGroup>
+
+## New Conversations
+
+A new conversation is created when a customer sends a message into any of your
+customer channels. At that moment we initiate a `Conversational Ticket` or add
+the message to an existing one.
+
+The conversation is visible in both your `Triage Channel` and the
+[Kanban Board](https://app.usepylon.com/issues).
+
+<Frame caption="On the left are three open conversations in your Triage Channel in Slack. On the right is the most recent message that created a conversation from a sample customer Spotify.">
+  <img src="/images/triage-channel.png" />
+</Frame>
+
+<Frame caption="The same conversations viewed from the Kanban Board in our UI.">
+  <img src="/images/kanban-board.png" />
+</Frame>
+
+Messages will be grouped into a conversation using a combination of criteria
+including AI, threading, timing.
+
+<Frame caption="Two seperate messages that are grouped into one conversation.">
+  <img src="/images/conversation-grouping-1.png" />
+</Frame>
+
+<Frame caption="What that one Conversation looks like in the Triage Channel">
+  <img src="/images/conversation-grouping-2.png" />
+</Frame>
+
+## Conversation Owners
+
+Conversations are assigned an `Owner` based on who the `Channel Owner` is for
+the `Account`. The `Channel Owner` is set when Pylon is added to that channel.
+
+You can always modify it by:
+
+1. Going to the [Accounts Page](https://app.usepylon.com/accounts)
+2. Clicking on the relevant `Account`
+3. Choosing a new `Account Owner`
+
+## Conversation Status
+
+New conversations start with the status `To Do`. As you respond to customer
+messages, Pylon uses AI to categorize the status of the conversation for you or
+you can always update the status manually using the
+[Kanban Board](https://app.usepylon.com/issues).
+
+| Status        | Explanation                                                  | Sample Trigger                                          |
+| ------------- | ------------------------------------------------------------ | ------------------------------------------------------- |
+| `To Do`       | You have not responded to the message.                       | Customer sends any message.                             |
+| `In Progress` | You sent a response that does not conclude the conversation. | You say "Taking a look" or "Let me check with the team" |
+| `Closed`      | You sent a response that concluded the conversation.         | You say "I just confirmed with the team..."             |
+
+<Frame caption="This response will mark the conversation as `In Progress`">
+  <img src="/images/non-conclusive.png" />
+</Frame>
+
+<Frame caption="This response will mark the conversation as `Closed`">
+  <img src="/images/conclusive.png" />
+</Frame>
+
+## Closing a Ticket
+
+You can mark a conversation as `Closed` in the Triage Channel by clicking the
+`Acknowledge` button in the Triage Channel, responding to a customer with a
+conclusive message, or by manually dragging a Conversation into the `Closed`
+state.
+
+## Discussing Issues Internally
+
+Because Traige Channels are just Slack channels, you can have discussions with
+others about Conversations directly from there. Simply add a reply within the
+Triage Channel.
+
+<Frame>
+  <img src="/images/ticket-discussion.png" />
+</Frame>

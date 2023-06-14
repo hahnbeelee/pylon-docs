@@ -1,130 +1,210 @@
 ---
 title: "The Basics"
-description: "Manage your Customer Conversations"
+description: "Create Support Tickets out of Conversations"
 icon: "circle-info"
 ---
 
 <Tip>
-  If you find yourself losing track of customer messages, not responding
-  quickly, or needing analytics on your customer conversations, it's time to
-  start using Pylon's ticketing.
+  If you have a seperate Support and Customer Success teams, you should be using
+  the support integration.
 </Tip>
 
-Pylon's ticketing system gives GTM teams structure around their customer
-conversations.
+The support integration allows your team and/or customers to initiate support
+tickets from Slack, that bidirectionally sync with an external support tool like
+Zendesk.
 
-All customer messages are captured and grouped into units of `Conversation`. For
-example, if two messages come in from a customer about the same topic, we
-automatically group them together.
+Unlike a [Conversational Ticket](/ticketing/overview), a support ticket is
+synced to an external support system like Zendesk. Support tickets are visible
+in Slack to the customer with a status.
 
-Each conversation has a status of `Open`, `In Progress`, or `Closed`.
+When the support team gets a new ticket synced to their support tool, they can
+respond without leaving their tool. That response will sync directly back to the
+Slack channel where the ticket was opened.
 
-Conversations can be viewed and handled directly in Slack via
-[Triage Channels](triage-channel) or from the [Kanban Board](kanban).
-
-Account Executives and Customer Success Managers typically have their own
-`Triage Channels` where they can track conversations related only to their own
-`Accounts`.
-
-Conversational tickets are completely invisible to a customer, unless you
-explicitly connect a conversation to a support tool like `Zendesk`, `Intercom`,
-or `Salesforce Service`.
-
-Conversations are created out of all customer Slack messages, including use
-cases like:
+Here's why this is powerful:
 
 <CardGroup cols={1}>
-  <Card title="Support Questions" icon="bug" color="#ea5a0c">
-    Either traige support questions directly or deflect them to a Support Team
-    like Zendesk, while still allowing the customer to stay in Slack and for you
-    to retain visibility.
+  <Card
+    title="Handoff Questions to the Support Team"
+    icon="hand-sparkles"
+    color="#0285c7"
+  >
+    If you're a CSM or Account Managers wasting time shuffling messages between
+    a customer and support, you can use the support integration to seamlessly
+    handoff support questions to the support team, directly from Slack.
   </Card>
-  <Card title="Relationship Building" icon="handshake" color="#0285c7">
-    Make sure you have good visibility on your customer asks, and always know
-    what you need to respond to.
+  <Card
+    title="Consoolidate Metrics in your Support System"
+    icon="magnifying-glass-chart"
+    color="#ea5a0c"
+  >
+    Through the support integration, all support questions from Slack will sync
+    to your Support Tool. This allows you to leverage all existing reporting and
+    workflows you have setup for non-Slack support.
   </Card>
-  <Card title="Sales Conversations" icon="money-bills" color="#16a34a">
-    Sales conversations are time-sensitive. Leverage our SLA monitoring to make
-    sure you respond promptly.
-  </Card>
-  <Card title="Product Feedback" icon="comments" color="#dc2626">
-    Engage the rest of your team on feedback from prospects or customers.
+  <Card title="Allow Customers to stay in Slack" icon="hashtag">
+    Support questions created through the Support Integration keep back and
+    forth on support questions in Slack. This gives full visibility to the CSM
+    or Account Manager on status in Slack.
   </Card>
 </CardGroup>
 
-## New Conversations
+## Opening a Ticket
 
-A new conversation is created when a customer sends a message into any of your
-customer channels. At that moment we initiate a `Conversational Ticket` or add
-the message to an existing one.
+### Customer Prompt
 
-The conversation is visible in both your `Triage Channel` and the
-[Kanban Board](https://app.usepylon.com/issues).
+When a customer asks a message in Slack that looks like a support question, they
+can be prompted to optionally open a support ticket. Enable this setting and
+customize the message they see on the
+[Workflows Page](https://app.usepylon.com/workflows).
 
-<Frame caption="On the left are three open conversations in your Triage Channel in Slack. On the right is the most recent message that created a conversation from a sample customer Spotify.">
-  <img src="/images/triage-channel.png" />
+<Frame>
+  <img src="/images/help-prompt.png" />
 </Frame>
 
-<Frame caption="The same conversations viewed from the Kanban Board in our UI.">
-  <img src="/images/kanban-board.png" />
+### Ticket Emoji
+
+You can react to any message or thread with the 🎫 emoji to create a ticket.
+
+<Frame>
+  <img src="/images/ticket-react.png" />
 </Frame>
 
-Messages will be grouped into a conversation using a combination of criteria
-including AI, threading, timing.
+### Tag Support
 
-<Frame caption="Two seperate messages that are grouped into one conversation.">
-  <img src="/images/conversation-grouping-1.png" />
+The customer can tag `@Your Company Support` at anytime to kickoff a support
+ticket.
+
+<Frame>
+  <img src="/images/tag-support.png" />
 </Frame>
 
-<Frame caption="What that one Conversation looks like in the Triage Channel">
-  <img src="/images/conversation-grouping-2.png" />
+### Floating Bar
+
+The floating bar is a message that stays "pinned" to the bottom of a channel. It
+stays pinned by constantly reposting itself at the bottom of the channel when
+new messages are sent in the channel.
+
+The bar itself has a button that opens a modal with a form to kickoff a support
+ticket. These inputs can be mapped to fields in your support system.
+
+This method of ticketing is the most forceful for your customer, as they will be
+reminded to open a support ticket with each message they send in the channel.
+
+<Frame>
+  <img src="/images/floating-bar.png" />
 </Frame>
 
-## Conversation Owners
-
-Conversations are assigned an `Owner` based on who the `Channel Owner` is for
-the `Account`. The `Channel Owner` is set when Pylon is added to that channel.
-
-You can always modify it by:
-
-1. Going to the [Accounts Page](https://app.usepylon.com/accounts)
-2. Clicking on the relevant `Account`
-3. Choosing a new `Account Owner`
-
-## Conversation Status
-
-New conversations start with the status `To Do`. As you respond to customer
-messages, Pylon uses AI to categorize the status of the conversation for you or
-you can always update the status manually using the
-[Kanban Board](https://app.usepylon.com/issues).
-
-| Status        | Explanation                                                  | Sample Trigger                                          |
-| ------------- | ------------------------------------------------------------ | ------------------------------------------------------- |
-| `To Do`       | You have not responded to the message.                       | Customer sends any message.                             |
-| `In Progress` | You sent a response that does not conclude the conversation. | You say "Taking a look" or "Let me check with the team" |
-| `Closed`      | You sent a response that concluded the conversation.         | You say "I just confirmed with the team..."             |
-
-<Frame caption="This response will mark the conversation as `In Progress`">
-  <img src="/images/non-conclusive.png" />
+<Frame>
+  <img src="/images/floating-bar-modal.png" />
 </Frame>
 
-<Frame caption="This response will mark the conversation as `Closed`">
-  <img src="/images/conclusive.png" />
+<Frame>
+  <img src="/images/floating-bar-submitted.png" />
 </Frame>
+
+## Responding from a Support Tool
+
+When a support ticket is created, a synced ticket is created in your support
+system.
+
+Messages posted in that support thread in Slack will be synced to your support
+system ticket, and vice versa.
+
+<Frame caption="Example of a conversation between someone in Intercom and a customer in Slack">
+  <img src="/images/bidirectional-sync.png" />
+</Frame>
+
+<Tip>
+  You can enable more granular ticket data such as a ticket link and ticket ID
+  to be visible in Slack.
+</Tip>
 
 ## Closing a Ticket
 
-You can mark a conversation as `Closed` in the Triage Channel by clicking the
-`Acknowledge` button in the Triage Channel, responding to a customer with a
-conclusive message, or by manually dragging a Conversation into the `Closed`
-state.
+Support ticket status is synced between your support system and Slack.
 
-## Discussing Issues Internally
+Either your team or the customer can click the `Close Issue` button in Slack or
+the support team can close the ticket from the support tool.
 
-Because Traige Channels are just Slack channels, you can have discussions with
-others about Conversations directly from there. Simply add a reply within the
-Triage Channel.
+State will be reflected in both systems.
 
 <Frame>
-  <img src="/images/ticket-discussion.png" />
+  <img src="/images/close-ticket-open.png" />
+</Frame>
+
+<Frame caption="What a closed support ticket looks like in Slack.">
+  <img src="/images/close-ticket-closed.png" />
+</Frame>
+
+## Additional Settings
+
+### Collect Custom Field
+
+You can collect additional field information to sync to your support system.
+
+This can be a dropdown or text input.
+
+The most common use case is collecting a `Severity` field as shown below.
+
+<Frame>
+  <img src="/images/custom-field.png" />
+</Frame>
+
+### Additional Ticket Message
+
+You can have an additional message post in Slack when new messages are opened.
+
+Common use cases include:
+
+- Notifying customers that your company is at an offsite
+- Special Holiday Hours (e.g. Winter Holiday)
+- Asking for a free-form field (e.g. Please include your Model ID)
+
+<Frame>
+  <img src="/images/additional-ticket.png" />
+</Frame>
+
+### Support Hours
+
+You can set custom support hours so that if a customer opens a support ticket
+outside of those hours, a custom message will be posted.
+
+<Frame caption="The settings page for support hours.">
+  <img src="/images/support-settings.png" />
+</Frame>
+
+<Frame caption="What the support message looks like when posted in Slack.">
+  <img src="/images/support-hours-feed.png" />
+</Frame>
+
+### Escalation
+
+<Tip>
+  We recommend you setup escalation not by using this method, but by collecting
+  a severity on ticket open, and triggering escalation from your support system
+  based on the selection.
+</Tip>
+
+If a message is sent outside of support hours you can enable an `Escalate`
+button to be included with the message. If the button is clicked, a message will
+be sent to a pre-selected escalation channel.
+
+<Frame caption="What the support message looks like when posted in Slack.">
+  <img src="/images/escalation.png" />
+</Frame>
+
+## View Support Tickets in Slack
+
+Anyone from your team can go into a customer channel and immediately get
+visibility into support tickets for the customer by typing `/pylon`.
+
+Three details including first message, `Status`, and link to external system are
+included.
+
+- 🎫 indicates the ticket is open
+- ✅ indicates the ticket is closed
+
+<Frame>
+  <img src="/images/slash-pylon.png" />
 </Frame>

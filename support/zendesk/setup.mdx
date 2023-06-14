@@ -3,23 +3,78 @@ title: "Setup"
 icon: "wand-magic-sparkles"
 ---
 
-<Note>You'll need a Hubspot administrator to complete the setup.</Note>
+<Note>You'll need a Zendesk administrator to complete the setup.</Note>
 
-1. Visit the [Integrations Page](https://app.usepylon.com/integrations) and hit
-   `Connect` under Hubspot
-
-<Frame>
-  <img src="/images/hubspot-install.png" />
-</Frame>
-3. Click `Authorize` on the Hubspot Authorization Page
-
-4. Click `Manage` on the Hubspot Integration and Confirm the User Mapping is set
-   correctly. The User Mapping allows us map Salesforce Users to Slack Users
-
-<Frame>
-  <img src="/images/hubspot-user-mapping.png" />
-</Frame>
+1. Send the Pylon team your Zendesk subdomain in your shared channel. You can
+   find your subdomain in your Zendesk URL `https://{subdomain}.zendesk.com`.
+2. Visit your [Integrations Page](https://app.usepylon.com/integrations) and hit
+   `Connect` under Zendesk
+3. Authorize the Zendesk App
+4. Click `Manage` on the Zendesk app and confirm the user mapping is set
+   properly
 
 All done!
 
-<Check>You've setup our Hubspot Integration</Check>
+<Check>You've setup the Zendesk Integration</Check>
+
+## Additional Configuration
+
+### Removing Email Notifications For Slack Tickets
+
+Zendesk is typically configured to send email notifications to the customer when
+there are new replies, or different events occur. Because tickets are being
+created from and will be updated in Slack, we don’t want to send additional
+email notifications for these tickets.
+
+1. Go to the Admin Center and click `Objects and rules` > `Triggers` (under
+   Business rules)
+2. For each trigger that starts with `Notify requester ...` modify the trigger
+
+   1. In the `Conditions` section add the following to the
+      **`Meet ALL of the following` section**
+   2. Typically the relevant trigger rules that need to be updated are called
+      **`Notify requester and CCs of received request`,
+      `Notify requester of new proactive ticket`,
+      `Notify requester and CCs of comment update`** {" "}
+      <Frame>
+        <img src="/images/zd-setup.png" />
+      </Frame>
+
+3. Repeat the above also for any custom triggers you have that send emails to
+   the customer
+
+### Required Fields
+
+If you have required fields setup before a ticket closes, Pylon cannot close out
+tickets from Slack because it does not know what values to set for those
+required fields. There are a couple of options - please let the Pylon team know
+which option you’d like so we can configure it for you.
+
+#### Option 1: New “Pending” status called “Closed in Slack”
+
+Create a new status `Closed in Slack` that is under the `Pending` category. When
+a customer closes out an issue from Slack, the ticket will be moved to this
+status along with a note on the ticket. Your team can setup a new view or use a
+workflow to then input required fields before “officially” closing out these
+issues. Customers see no difference in behavior after they have marked the issue
+as closed in Slack.
+
+1. To do this, go to the Admin Center and click on `Objects and rules` >
+   `Ticket statuses` (under Tickets)
+2. Click `Create ticket status` and create a new status called `Closed in Slack`
+   under the `Pending` category
+
+   <Frame>
+     <img src="/images/zd-setup-2.png" />
+   </Frame>
+
+3. Once you have made the new status, let the Pylon team know and we will apply
+   this change.
+
+#### Option 2: Don’t allow customers to close out ticket in Slack
+
+Don’t allow customers to close out issues in Slack. This means only your team
+can close out tickets in Zendesk, and input required fields when doing so.
+
+If you choose this option, let the Pylon team know and they will disable the
+setting that allows customers to close out tickets from Slack.

@@ -54,15 +54,19 @@
   "navigation": [
     {
       "group": "Conversational Ticketing",
-      "pages": ["ticketing/overview", "ticketing/triage-channel", "ticketing/kanban"]
-    },
-    {
-      "group": "CRM Integration",
-      "pages": ["crm/overview", { "group": "Salesforce", "pages": ["crm/salesforce/setup", "crm/salesforce/features"]},{ "group": "Hubspot", "pages": ["crm/hubspot/setup", "crm/hubspot/features"]}]
+      "pages": ["ticketing/overview", "ticketing/triage-channel", "ticketing/kanban", "ticketing/analytics"]
     },
     {
       "group": "Broadcast",
       "pages": ["broadcast/overview", "broadcast/send", "broadcast/analytics", "broadcast/view-all"]
+    },
+    {
+      "group": "Support Integration",
+      "pages": ["support/overview", { "group": "Zendesk", "pages": ["support/zendesk/setup"]}, { "group": "Intercom", "pages": ["support/intercom/setup"]},{ "group": "Salesforce Service", "pages": ["support/salesforce-service/setup"]}, { "group": "Freshdesk", "pages": ["support/freshdesk/setup"]}]
+    },
+    {
+      "group": "CRM Integration",
+      "pages": ["crm/overview", { "group": "Salesforce", "pages": ["crm/salesforce/setup", "crm/salesforce/features"]},{ "group": "Hubspot", "pages": ["crm/hubspot/setup", "crm/hubspot/features"]}]
     }
   ],
   "footerSocials": {
