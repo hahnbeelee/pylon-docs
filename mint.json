@@ -53,7 +53,11 @@
   ],
   "navigation": [
     {
-      "group": "CRM Sync",
+      "group": "Conversational Ticketing",
+      "pages": ["ticketing/overview", "ticketing/triage-channel", "ticketing/kanban"]
+    },
+    {
+      "group": "CRM Integration",
       "pages": ["crm/overview", { "group": "Salesforce", "pages": ["crm/salesforce/setup", "crm/salesforce/features"]},{ "group": "Hubspot", "pages": ["crm/hubspot/setup", "crm/hubspot/features"]}]
     },
     {
