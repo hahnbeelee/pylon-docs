@@ -71,6 +71,10 @@
     {
       "group": "CRM Integration",
       "pages": ["crm/overview", { "group": "Salesforce", "pages": ["crm/salesforce/setup", "crm/salesforce/features"]},{ "group": "Hubspot", "pages": ["crm/hubspot/setup", "crm/hubspot/features"]}]
+    },
+    {
+      "group": "Operations Automation",
+      "pages": ["ops-automation/bookmarks", "ops-automation/onboard-employee"]
     }
   ],
   "footerSocials": {
