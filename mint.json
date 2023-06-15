@@ -53,6 +53,10 @@
   ],
   "navigation": [
     {
+      "group": "Getting Started",
+      "pages": ["getting-started/introduction", "getting-started/install-slack"]
+    },
+    {
       "group": "Conversational Ticketing",
       "pages": ["ticketing/overview", "ticketing/triage-channel", "ticketing/kanban", "ticketing/analytics"]
     },
