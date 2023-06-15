@@ -1,0 +1,79 @@
+---
+title: "Channel Setup"
+icon: "hashtag"
+---
+
+## Creating Triage Channels
+
+<Tip>
+  We recommend reading the guides on [Conversational Ticketing](/ticketing) &
+  [Triage Channels](/ticketing/triage-channel) first
+</Tip>
+
+### For Small Teams
+
+Small teams should create two Slack Channels:
+
+- _#prospects_
+- _#customers_
+
+This will allow you to keep track of prospect and customer conversations
+seperately.
+
+### For Larger Teams
+
+If you have multiple team members handling accounts, we recommend opening up one
+triage channel per person on your team is responsible for handling account
+messages.
+
+For example, if you have three Account Managers Alex, Sabrina, and John:
+
+- _#alex-customers_
+- _#sabrina-customers_
+- _#john-customers_
+
+<Check>You can now connect customer channels to these Triage Channels.</Check>
+
+## Enable a Customer Channel
+
+<Tip>
+  During onboarding, our implementation team will help you bulk enable Pylon in
+  your existing channels.
+</Tip>
+
+Pylon will only be enabled in customer channels that you explicitly enable it
+in. If you want it to be enabled in channels automatically, you can use our
+[CRM widget](/crm/salesforce/features#channel-creation-from-salesforce) to
+create channels and setup Pylon for you.
+
+1. Go to your customer channel
+2. Type `@Pylon` or the whatever you named the Pylon bot as and you'll be
+   prompted to invite Pylon to the channel and click `enter` (do not click the
+   send button as this actually sends the message)
+   <Frame>
+     <img src="/images/enable-1.png" />
+   </Frame>
+3. You'll get a prompt suggesting you add the bot to the channel instead of
+   sending a message. Click `Add to Channel`
+
+   <Frame>
+     <img src="/images/enable-2.png" />
+   </Frame>
+
+4. You'll get a prompt to enable Pylon in the channel
+
+<Frame>
+  <img src="/images/enable-3.png" />
+</Frame>
+
+5. Fill out the modal with your preferences including selecting the desired
+   triage channel (these will be saved for the next time)
+
+<Frame>
+  <img src="/images/enable-4.png" />
+</Frame>
+
+<Check>
+  This channel has now been enabled and now messages from the customer in that
+  channel will be sent to the triage channel!
+</Check>
