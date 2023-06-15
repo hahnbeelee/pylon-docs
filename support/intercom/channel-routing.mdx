@@ -1,0 +1,82 @@
+---
+title: "Channel Routing"
+icon: "route"
+---
+
+The Intercom Routing feature allows you to take an issue created by Pylon in one
+Slack channel and route it through Intercom to another different Slack channel.
+The origination channel, destination channel, Intercom, and an optional internal
+feed channel will all be kept in syncing, allowing all parties to communicate
+with each other.
+
+<Warning>
+  Note: The origination and destination slack channels must be linked Pylon
+  accounts. You can see which accounts are linked on the [Accounts
+  Page](https://app.usepylon.com/accounts).
+</Warning>
+
+To route an issue from Slack to another Slack channel you can either use a saved
+macro, or fill in the slack channel ID in your custom attribute, and then
+execute a custom action. If the issue successfully routed, you will see a note
+in Intercom indicating this.
+
+### Setup with Macros
+
+If this is a common channel you route issues to, you can
+[create a macro](https://www.notion.so/Intercom-Routing-a06f06328385471e8296d4b059e8c8b7?pvs=21)
+for it. To access the macro:
+
+- In the inbox view, click the lightning bolt (⚡) below the text input or type
+  `CMD-K` to pop open the action menu
+- Click `Use macro` or type `#`
+- Select the macro and hit enter
+
+<Frame>
+  <img src="/images/macro-1.png" />
+</Frame>
+
+<Frame>
+  <img src="/images/macro-2.png" />
+</Frame>
+
+### Setup with Custom Actions
+
+You can route a Slack issues to any other Pylon account via these steps:
+
+- In the inbox view, find the custom attribute that is configured with your
+  custom action.
+- Put the slack channel ID
+  ([learn how to find that](https://www.youtube.com/watch?v=JDVd0HF7DvE)) into
+  that attribute
+- Click the lightning bolt (⚡) below the text input or type `CMD-K` to pop open
+  the action menu
+- Click `Trigger custom action` and choose `Route Message to Slack`
+
+<Frame>
+  <img src="/images/custom-action-1.png" />
+</Frame>
+
+<Frame>
+  <img src="/images/custom-action-2.png" />
+</Frame>
+
+<Frame>
+  <img src="/images/custom-action-3.png" />
+</Frame>
+
+### Create a Macro
+
+- Click on your profile > Settings > {Company} Data > Macros (Saved replies)
+- Create a new macro
+
+  - Give it a display name
+  - **First Step:** Set the channel ID in the custom attribute you have set
+    ([learn how to find that](https://www.youtube.com/watch?v=JDVd0HF7DvE))
+  - **Second Step:** Add the “Route Message to Slack” custom action
+
+<Frame>
+  <img src="/images/add-macro-1.png" />
+</Frame>
+<Frame>
+  <img src="/images/add-macro-2.png" />
+</Frame>

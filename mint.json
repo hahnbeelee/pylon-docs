@@ -66,7 +66,7 @@
     },
     {
       "group": "Support Integration",
-      "pages": ["support/overview", "support/custom-fields", "support/custom-message", "support/support-hours", { "group": "Zendesk", "pages": ["support/zendesk/setup"]}, { "group": "Intercom", "pages": ["support/intercom/setup"]},{ "group": "Salesforce Service", "pages": ["support/salesforce-service/setup"]}, { "group": "Freshdesk", "pages": ["support/freshdesk/setup"]}]
+      "pages": ["support/overview", "support/user-prompt", "support/custom-fields", "support/custom-message", "support/support-hours", "support/csat", { "group": "Zendesk", "pages": ["support/zendesk/setup", "support/zendesk/features"]}, { "group": "Intercom", "pages": ["support/intercom/setup", "support/intercom/features", "support/intercom/channel-routing"]},{ "group": "Salesforce Service", "pages": ["support/salesforce-service/setup", "support/salesforce-service/features"]}, { "group": "Freshdesk", "pages": ["support/freshdesk/setup"]}]
     },
     {
       "group": "CRM Integration",

@@ -1,40 +1,42 @@
 ---
 title: "Features"
-icon: "shapes"
+icon: "intercom"
 ---
 
-## Activity Sync
+- Tickets originating from Slack will be tagged with `Slack` within Intercom
+- Replies made in Intercom on Pylon tickets will be synced back to your
+  customer’s Slack channel in real-time and vice versa
+- Notes made in Intercom on Pylon tickets will be synced back to your internal
+  feed channel in real time and vice versa
 
-Everyday, Pylon scans your customer channels for conversations that were had.
-For every conversation, we use AI to summarize the details, and sync the summary
-to the relevant `Account` in Hubspot.
-
-<Frame>
-  <img src="/images/hubspot-activity.png" />
+<Frame caption="Example of a conversation between someone in Intercom and a customer in Slack">
+  <img src="/images/bidirectional-sync.png" />
 </Frame>
 
-## Contact Sync
+## Data Carryover
 
-When someone new joins a prospect or customer channel, we add that contact to
-Hubspot and link it to the relevant `Account`.
+Pylon creates rich data in Intercom for Slack activity. Contacts with company
+domains, enriched emails, and avatars are made and associated with tickets.
 
-<Frame>
-  <img src="/images/hubspot-contact.png" />
-</Frame>
+This includes:
 
-## Broadcast Filtering
+| Data Type    | Supported |
+| ------------ | --------- |
+| New Contacts | ✅        |
+| Emails       | ✅        |
+| Avatars      | ✅        |
 
-You may want to send a Broadcast to a set of customers based on data stored in
-Hubspot.
+## Supported Formatting
 
-<Frame>
-  <img src="/images/sfdc-broadcast.png" />
-</Frame>
-
-## Ticketing
-
-View and filter `Issues` by Hubspot tags.
-
-<Frame>
-  <img src="/images/sfdc-ticketing.png" />
-</Frame>
+| Format                     | Supported |
+| -------------------------- | --------- |
+| **Bold**                   | ✅        |
+| _Italics_                  | ✅        |
+| `Inline Code`              | ✅        |
+| Emojis 😊                  | ✅        |
+| Links                      | ✅        |
+| Multiline Code             | ✅        |
+| Inline Images              | ✅        |
+| Attachments                | ✅        |
+| GIFs                       | ✅        |
+| Mention User from Intercom | ✅        |
