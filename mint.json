@@ -65,11 +65,11 @@
       "pages": ["broadcast/overview", "broadcast/send", "broadcast/analytics", "broadcast/view-all"]
     },
     {
-      "group": "Support Integration",
+      "group": "Support Ticketing",
       "pages": ["support/overview", "support/user-prompt", "support/custom-fields", "support/custom-message", "support/support-hours", "support/csat", { "group": "Zendesk", "pages": ["support/zendesk/setup", "support/zendesk/features"]}, { "group": "Intercom", "pages": ["support/intercom/setup", "support/intercom/features", "support/intercom/channel-routing"]},{ "group": "Salesforce Service", "pages": ["support/salesforce-service/setup", "support/salesforce-service/features"]}, { "group": "Freshdesk", "pages": ["support/freshdesk/setup"]}, { "group": "Jira Service Management", "pages": ["support/jsm/setup"]}]
     },
     {
-      "group": "CRM Integration",
+      "group": "CRM Add-On",
       "pages": ["crm/overview", { "group": "Salesforce", "pages": ["crm/salesforce/setup", "crm/salesforce/features"]},{ "group": "Hubspot", "pages": ["crm/hubspot/setup", "crm/hubspot/features"]}]
     },
     {
