@@ -58,7 +58,7 @@
     },
     {
       "group": "Conversational Ticketing",
-      "pages": ["ticketing/overview", "ticketing/triage-channel", "ticketing/kanban", "ticketing/analytics"]
+      "pages": ["ticketing/overview", "ticketing/triage-channel", "ticketing/kanban", "ticketing/assignment", "ticketing/analytics"]
     },
     {
       "group": "Broadcast",
