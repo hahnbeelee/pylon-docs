@@ -1,0 +1,47 @@
+---
+title: "Microsoft Teams"
+description: "Link a Microsoft Teams Channel to Slack"
+icon: "windows"
+---
+
+<Tip>
+  Microsoft Teams is a huge pain to use and communicate with customers through.
+  Our current recommendation is to talk to customers over email instead of Teams
+  if you can help it for now. If you insist otherwise, we have an option for
+  you, but be warned, it will require a heavy lift for implementation.
+</Tip>
+
+The Slack-Teams Bridge allows you to mirror messages from a Teams Channel to a
+Slack channel in your own workspace, and vice versa. This feature reduces the
+pain of having to use Teams to talk to customers that don't use Slack
+internally.
+
+Threaded and non-threaded conversations are supported.
+
+<Frame>
+  <img src="/images/teams.png" />
+</Frame>
+
+## Limitations
+
+### Channel Setup
+
+Group chats and channels are supported, but only if you initiated it. Otherwise,
+your customer is the only one that can add Pylon into the channel or chat.
+
+If you already have a chat that the customer created, you must move the
+conversation to a chat or channel that you've initiated.
+
+### Reactions
+
+Reactions will be posted in a way similar to if you react to a text message in a
+chat between an Android and iPhone. This is because the emoji systems used
+between Teams does not use standard emojis.
+
+```
+Marty reacted ":+1:" to "Message"
+```
+
+### Files
+
+Files are currently not supported.
