@@ -83,5 +83,10 @@
   ],
   "footerSocials": {
     "linkedin": "https://www.linkedin.com/company/usepylon"
+  },
+  "analytics": {
+    "koala": {
+      "publicApiKey": "pk_8ab6e314b6f0427c239b08011517d1fe94e9"
+    }
   }
 }
