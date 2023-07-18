@@ -31,24 +31,14 @@
   },
   "anchors": [
     {
+      "name": "Book a Demo",
+      "url": "https://cal.com/pylon/demo",
+      "icon": "calendar"
+    },
+    {
       "name": "Website",
       "url": "https://usepylon.com",
       "icon": "globe"
-    },
-    {
-      "name": "Security",
-      "url": "https://usepylon.com/security.pdf",
-      "icon": "shield-halved"
-    },
-    {
-      "name": "Privacy Policy",
-      "url": "https://usepylon.com/privacy.pdf",
-      "icon": "magnifying-glass"
-    },
-    {
-      "name": "Terms & Conditions",
-      "url": "https://usepylon.com/terms.pdf",
-      "icon": "file"
     }
   ],
   "navigation": [
@@ -82,7 +72,7 @@
     },
     {
       "group": "Product Ticketing",
-      "pages": ["product-ticketing/github"]
+      "pages": ["product-ticketing/github", "product-ticketing/linear", "product-ticketing/jira", "product-ticketing/asana"]
     }
   ],
   "footerSocials": {
