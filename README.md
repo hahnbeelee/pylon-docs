@@ -1,13 +1,6 @@
-# Mintlify Starter Kit
+# Pylon Docs
 
-Click on `Use this template` to copy the Mintlify starter kit. The starter kit
-contains examples including
-
-- Guide pages
-- Navigation
-- Customizations
-- API Reference pages
-- Use of popular components
+Markdown code for [docs.usepylon.com](https://docs.usepylon.com).
 
 ### 👩‍💻 Development
 
@@ -24,7 +17,7 @@ Run the following command at the root of your documentation (where mint.json is)
 mintlify dev
 ```
 
-### 😎 Publishing Changes
+### Shipping Changes 🚢
 
 Changes will be deployed to production automatically after pushing to the
 default branch.
