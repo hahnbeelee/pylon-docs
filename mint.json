@@ -55,6 +55,7 @@
       "pages": [
         "ticketing/overview",
         "ticketing/triage-channel",
+        "ticketing/ai-tags",
         "ticketing/kanban",
         "ticketing/assignment",
         "ticketing/sla",
@@ -118,7 +119,7 @@
       ]
     },
     {
-      "group": "Chat Bridges",
+      "group": "Chat Systems",
       "pages": [
         "bridges/teams",
         "bridges/discord",
