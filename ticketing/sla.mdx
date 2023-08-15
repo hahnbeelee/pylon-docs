@@ -1,0 +1,57 @@
+---
+title: "SLA Management"
+description: "Set First Response and Resolution Times"
+icon: "hourglass"
+---
+
+<Tip>Tip: You can set SLAs based on data in your CRM</Tip>
+
+SLAs (AKA Service Level Agreements) are reminder-based rules for how quickly you
+want to respond and resolve customer issues.
+
+Pylon supports two levels of SLA:
+
+1. First Response Time: First response time is how quickly someone on your team
+   has responded to a message or request.
+
+2. Resolution Time: Time to resolution is how long it takes to close a
+   conversation after it's been started.
+
+## Setup
+
+You can customize SLAs on the
+[Workflows Page](https://app.usepylon.com/workflows).
+
+SLAs can be customized for different sets of customers based on Tags set either
+in Pylon or tags set from your CRM.
+
+For example, below we have seperated pre-sales and post-sales SLAs:
+
+| SLA                        | First Response | Resolution | Escalation Channel   |
+| -------------------------- | -------------- | ---------- | -------------------- |
+| Default                    | 60m            | 7 days     | #support-escalations |
+| Prospect (Pulled from CRM) | 60m            | 2 days     | #prospect-alerts     |
+
+<Frame>
+  <img src="/images/sla-settings.png" />
+</Frame>
+
+## SLA Alerts
+
+If the SLA period is passed, the following alerts will sent out.
+
+1. The `Escalation Channel` configured will be notified
+2. If the `Conversation` has an Assignee they will aslo get a direct message
+   from the Pylon bot
+
+<Frame>
+  <img src="/images/sla-breached.png" />
+</Frame>
+
+## Support Hours
+
+If you want the SLAs times to only work during your working hours, you can
+configure Support Hours on the
+[Workflows Page](https://app.usepylon.com/workflows).
+
+This ends up being useful for off-hours on weekdays and weekends.

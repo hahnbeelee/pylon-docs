@@ -44,35 +44,104 @@
   "navigation": [
     {
       "group": "Getting Started",
-      "pages": ["getting-started/introduction", "getting-started/install-slack", "getting-started/link-account"]
+      "pages": [
+        "getting-started/introduction",
+        "getting-started/install-slack",
+        "getting-started/link-account"
+      ]
     },
     {
       "group": "Conversational Ticketing",
-      "pages": ["ticketing/overview", "ticketing/triage-channel", "ticketing/kanban", "ticketing/assignment", "ticketing/analytics"]
+      "pages": [
+        "ticketing/overview",
+        "ticketing/triage-channel",
+        "ticketing/kanban",
+        "ticketing/assignment",
+        "ticketing/sla",
+        "ticketing/analytics"
+      ]
     },
     {
       "group": "Broadcast",
-      "pages": ["broadcast/overview", "broadcast/send", "broadcast/analytics", "broadcast/view-all"]
+      "pages": [
+        "broadcast/overview",
+        "broadcast/send",
+        "broadcast/analytics",
+        "broadcast/view-all"
+      ]
     },
     {
       "group": "Support Ticketing",
-      "pages": ["support/overview", "support/ai", "support/user-prompt", "support/custom-fields", "support/custom-message", "support/support-hours", "support/csat", { "group": "Zendesk", "pages": ["support/zendesk/setup", "support/zendesk/features"]}, { "group": "Intercom", "pages": ["support/intercom/setup", "support/intercom/features", "support/intercom/channel-routing"]},{ "group": "Salesforce Service", "pages": ["support/salesforce-service/setup", "support/salesforce-service/features"]}, { "group": "Freshdesk", "pages": ["support/freshdesk/setup"]}, { "group": "Jira Service Management", "pages": ["support/jsm/setup"]}]
+      "pages": [
+        "support/overview",
+        "support/ai",
+        "support/user-prompt",
+        "support/custom-fields",
+        "support/custom-message",
+        "support/support-hours",
+        "support/csat",
+        {
+          "group": "Zendesk",
+          "pages": ["support/zendesk/setup", "support/zendesk/features"]
+        },
+        {
+          "group": "Intercom",
+          "pages": [
+            "support/intercom/setup",
+            "support/intercom/features",
+            "support/intercom/channel-routing"
+          ]
+        },
+        {
+          "group": "Salesforce Service",
+          "pages": [
+            "support/salesforce-service/setup",
+            "support/salesforce-service/features"
+          ]
+        },
+        { "group": "Freshdesk", "pages": ["support/freshdesk/setup"] },
+        { "group": "Jira Service Management", "pages": ["support/jsm/setup"] }
+      ]
     },
     {
       "group": "CRM",
-      "pages": ["crm/overview", { "group": "Salesforce", "pages": ["crm/salesforce/setup", "crm/salesforce/features"]},{ "group": "Hubspot", "pages": ["crm/hubspot/setup", "crm/hubspot/features"]}]
+      "pages": [
+        "crm/overview",
+        {
+          "group": "Salesforce",
+          "pages": ["crm/salesforce/setup", "crm/salesforce/features"]
+        },
+        {
+          "group": "Hubspot",
+          "pages": ["crm/hubspot/setup", "crm/hubspot/features"]
+        }
+      ]
     },
     {
       "group": "Chat Bridges",
-      "pages": ["bridges/teams", "bridges/discord", "bridges/whatsapp", "bridges/telegram"]
+      "pages": [
+        "bridges/teams",
+        "bridges/discord",
+        "bridges/whatsapp",
+        "bridges/telegram"
+      ]
     },
     {
       "group": "Operations Automation",
-      "pages": ["ops-automation/welcome-message", "ops-automation/bookmarks", "ops-automation/onboard-employee"]
+      "pages": [
+        "ops-automation/welcome-message",
+        "ops-automation/bookmarks",
+        "ops-automation/onboard-employee"
+      ]
     },
     {
       "group": "Product Ticketing",
-      "pages": ["product-ticketing/github", "product-ticketing/linear", "product-ticketing/jira", "product-ticketing/asana"]
+      "pages": [
+        "product-ticketing/github",
+        "product-ticketing/linear",
+        "product-ticketing/jira",
+        "product-ticketing/asana"
+      ]
     }
   ],
   "footerSocials": {
