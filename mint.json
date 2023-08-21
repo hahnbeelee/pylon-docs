@@ -115,6 +115,10 @@
         {
           "group": "Hubspot",
           "pages": ["crm/hubspot/setup", "crm/hubspot/features"]
+        },
+        {
+          "group": "Attio",
+          "pages": ["crm/attio/setup", "crm/attio/features"]
         }
       ]
     },
