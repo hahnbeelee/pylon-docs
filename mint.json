@@ -72,6 +72,15 @@
       ]
     },
     {
+      "group": "In-App Chat",
+      "pages": [
+        "chat/overview",
+        "chat/setup",
+        "chat/id-verification",
+        "chat/api"
+      ]
+    },
+    {
       "group": "Support Ticketing",
       "pages": [
         "support/overview",

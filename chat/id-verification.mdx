@@ -1,0 +1,68 @@
+---
+title: "Identity Verification"
+icon: "id-badge"
+---
+
+For an added layer of security, verify the identity of the user to prevent your customers from impersonating each other. This is optional but encouraged.
+
+1. Visit the In-App Chat tab on the Workflows page (app.usepylon.com/workflows) and scroll down to the Identity Verification section. Generate a Secret key. Copy this and save it, this will be the only time you will see this key.
+
+1. On your backend, hash the user's email address using HMAC-SHA256 with the secret you just generated. Here are some code snippets to help:
+
+<CodeGroup>
+
+```javascript JavaScript (Node.js)
+const { createHmac } = require("node:crypto");
+
+const secret = "GENERATED_IDENTITY_SECRET";
+const email = "CHAT_USER_EMAIL";
+
+const verificationHash = createHmac("sha256", secret)
+  .update(email)
+  .digest("hex");
+```
+
+```python Python
+import hmac
+import hashlib
+
+def sign_message_with_hmac(message, secret):
+    secret_bytes = bytes.fromhex(secret)
+    signature = hmac.new(secret_bytes, message.encode(), hashlib.sha256).hexdigest()
+    return signature
+```
+
+```go Go
+package auth
+
+import (
+	"crypto/hmac"
+	"crypto/sha256"
+	"encoding/hex"
+)
+
+func SignMessageWithHMAC(message, secret string) (*string, error) {
+	secretBytes, err := hex.DecodeString(secret)
+	if err != nil {
+		return nil, errors.New("unable to decode secret)
+	}
+
+	h := hmac.New(sha256.New, secretBytes)
+	h.Write([]byte(message))
+	signature := h.Sum(nil)
+
+	signedMsg := hex.EncodeToString(signature)
+
+	return &signedMsg, nil
+}
+```
+
+</CodeGroup>
+
+3. Send this hash to the Frontend and set it on the window object:
+
+```
+window.pylon.chat_settings.email_hash = HMAC_HASH
+```
+
+Now the user is verified when they open the chat!
