@@ -88,7 +88,7 @@
         "support/user-prompt",
         "support/custom-fields",
         "support/custom-message",
-        "support/support-hours",
+        "support/after-hours",
         "support/csat",
         {
           "group": "Zendesk",
@@ -143,6 +143,7 @@
     {
       "group": "Operations Automation",
       "pages": [
+        "ops-automation/support-hours",
         "ops-automation/left-company",
         "ops-automation/welcome-message",
         "ops-automation/bookmarks",
