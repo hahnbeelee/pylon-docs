@@ -1,0 +1,41 @@
+---
+title: "Chat Setup"
+icon: "hammer"
+---
+
+## Installation
+
+<Note>
+  Installing In-App Chat will involve adding code to your Frontend. It may be
+  necessary to involve an engineer to get this installed if you don't have
+  access to the codebase.
+</Note>
+
+1. Visit the In-App Chat tab on the workflows page (app.usepylon.com/workflows)
+1. Copy the Embed Script and paste it into your index.html file.
+1. We expose a window object for you to set information on the current logged in user. We use this information to identify and personalize which user is using the chat. The shape of the window object is as follows:
+
+```
+window.pylon = {
+  chat_settings: {
+    app_id: "APP_ID (THIS GETS AUTOFILLED)",
+    email: "CHAT_USER_EMAIL",
+    name: "CHAT_USER_NAME",
+
+    // Optional: if you are using Pylon's identity verification.
+    email_hash: "CHAT_USER_EMAIL_HASH",
+
+    // Optional: if you have the user's avatar available through something
+    // like Auth0.
+    avatar_url: "CHAT_USER_AVATAR_URL",
+  },
+};
+```
+
+1. Visit the In-App Chat Workflows page again (app.usepylon.com/workflows) and set the Chat Support Channel where you want messages from customers without shared Slack channels to go. We recommend creating a new channel `#chat-support` and adding your support team here.
+
+PICTURE
+
+1. Customize the brand color on the In-App Chat Workflows page as well. Use the preview on the right to adjust it to your liking. We recommend a darker shade so the white text color can be readable.
+
+And voila! You now have In-App Chat!
