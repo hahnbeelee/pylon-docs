@@ -11,9 +11,12 @@ icon: "hammer"
   access to the codebase.
 </Note>
 
-1. Visit the In-App Chat tab on the workflows page (app.usepylon.com/workflows)
-1. Copy the Embed Script and paste it into your index.html file.
-1. We expose a window object for you to set information on the current logged in user. We use this information to identify and personalize which user is using the chat. The shape of the window object is as follows:
+<Steps>
+  <Step title="Getting Started">
+Visit the In-App Chat tab on the workflows page (app.usepylon.com/workflows). Copy the Embed Script and paste it into your index.html file.
+  </Step>
+  <Step title="Setting the Window Object">
+We expose a window object for you to set information on the current logged in user. We use this information to identify and personalize which user is using the chat. The shape of the window object is as follows:
 
 ```
 window.pylon = {
@@ -32,8 +35,26 @@ window.pylon = {
 };
 ```
 
-1. Visit the In-App Chat Workflows page again (app.usepylon.com/workflows) and set the Chat Support Channel where you want messages from customers without shared Slack channels to go. We recommend creating a new channel `#chat-support` and adding your support team here.
+  </Step>
 
-1. Customize the brand color on the In-App Chat Workflows page as well. Use the preview on the right to adjust it to your liking. We recommend a darker shade so the white text color can be readable.
+<Step title="Configure Channels">
+  Visit the In-App Chat Workflows page again (app.usepylon.com/workflows) and
+  set the Chat Support Channel where you want messages from customers without
+  shared Slack channels to go. We recommend creating a new channel
+  `#chat-support` and adding your support team here.
+</Step>
+
+<Step title="CSP">
+  If you have a CSP, you will need to allowlist `*.usepylon.com`,
+  `*.posthog.com`, and `*.pusher.com`. For context, we use PostHog for product
+  metrics and Pusher for sending chat messages in realtime.
+</Step>
+
+<Step title="Customization">
+  And last but not least, customize the brand color on the In-App Chat Workflows
+  page. Use the preview on the right to adjust it to your liking. We recommend a
+  darker shade so the white text color can be readable.
+</Step>
+</Steps>
 
 And voila! You now have In-App Chat!
