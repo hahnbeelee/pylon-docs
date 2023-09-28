@@ -32,8 +32,10 @@ window.pylon = {
 };
 ```
 
-1. Visit the In-App Chat Workflows page again (app.usepylon.com/workflows) and set the Chat Support Channel where you want messages from customers without shared Slack channels to go. We recommend creating a new channel `#chat-support` and adding your support team here.
+4. Visit the In-App Chat Workflows page again (app.usepylon.com/workflows) and set the Chat Support Channel where you want messages from customers without shared Slack channels to go. We recommend creating a new channel `#chat-support` and adding your support team here.
 
-1. Customize the brand color on the In-App Chat Workflows page as well. Use the preview on the right to adjust it to your liking. We recommend a darker shade so the white text color can be readable.
+1. If you have a CSP, you will need to allowlist `*.usepylon.com`, `*.posthog.com`, and `*.pusher.com`. For context, we use PostHog for product metrics and Pusher for sending chat messages in realtime.
+
+1. And last but not least, customize the brand color on the In-App Chat Workflows page. Use the preview on the right to adjust it to your liking. We recommend a darker shade so the white text color can be readable.
 
 And voila! You now have In-App Chat!
