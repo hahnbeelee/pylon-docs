@@ -91,6 +91,10 @@
         "support/after-hours",
         "support/csat",
         {
+          "group": "Email",
+          "pages": ["support/email/setup"]
+        },
+        {
           "group": "Zendesk",
           "pages": ["support/zendesk/setup", "support/zendesk/features"]
         },
