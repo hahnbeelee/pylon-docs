@@ -12,3 +12,14 @@ Opens the chat window. Useful for programmatically triggering the chat window fr
 ## window.Pylon("hide")
 
 Closes the chat window.
+
+
+<script>
+  // JavaScript code to get the URL parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  const myParam = urlParams.get('test');
+
+  // Assign to a global variable
+  window.myGlobalVar = myParam;
+</script>
+{window.myGlobalVar}
