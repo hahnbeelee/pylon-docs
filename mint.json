@@ -81,6 +81,10 @@
       ]
     },
     {
+      "group": "Community",
+      "pages": ["community/overview", "community/setup"]
+    },
+    {
       "group": "Support Ticketing",
       "pages": [
         "support/overview",
