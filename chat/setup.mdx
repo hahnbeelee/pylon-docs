@@ -79,20 +79,19 @@ useEffect(() => {
 
 <Step title="Identity Verification">
   This is optional, but recommended.
+
+  [Here's how to set it up](https://app.usepylon.com/workflows/in-app-chat).
 </Step>
 
-
+<Step title="Content Security Policy">
+  If you have a CSP, you will need to allowlist `*.usepylon.com`,
+  `*.posthog.com`, and `*.pusher.com`. 
+  
+  For context, we use PostHog for product
+  metrics and Pusher for sending chat messages in realtime.
+</Step>
 
 <Step title="All Done!">
 </Step>
 </Steps>
-
-### Recommended: Identity Verification
-
-
-### Content Security Policy
-
-  If you have a CSP, you will need to allowlist `*.usepylon.com`,
-  `*.posthog.com`, and `*.pusher.com`. For context, we use PostHog for product
-  metrics and Pusher for sending chat messages in realtime.
 
