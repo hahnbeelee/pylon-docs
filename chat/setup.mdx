@@ -17,7 +17,7 @@ Grab your `APP_ID` [here](https://app.usepylon.com/workflows/in-app-chat).
   </Step>
 
     <Step title="Add Script to Body">
-Add the following `<script>` right before the `</body>` tag in your `index.html`.
+Add the following `<script>` to right before the `</body>` tag in your `index.html`.
 
 Maks sure to replace the `APP_ID` with the `APP_ID` you grabbed from Step 1. 
 ```markup
@@ -30,7 +30,7 @@ Maks sure to replace the `APP_ID` with the `APP_ID` you grabbed from Step 1.
   <Step title="Enable the Chat Widget">
 Anywhere in your React code you can access the `window` object and set the `pylon` config.
 
-You should add this code wherever the user has already logged in and details like the User's email, name, etc. become available.
+You should add this code whereever the user has already logged in and details like the User's email, name, etc. become available.
 
 ```js
 window.pylon = {
@@ -77,11 +77,18 @@ useEffect(() => {
   Set the color of your chat widget [here](https://app.usepylon.com/workflows/in-app-chat).
 </Step>
 
+<Step title="Identity Verification">
+  This is optional, but recommended.
+</Step>
 
-<Step title="All Done">
-  Set the color of your chat widget [here](https://app.usepylon.com/workflows/in-app-chat).
+
+
+<Step title="All Done!">
 </Step>
 </Steps>
+
+### Recommended: Identity Verification
+
 
 ### Content Security Policy
 

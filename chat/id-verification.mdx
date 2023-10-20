@@ -3,11 +3,20 @@ title: "Identity Verification"
 icon: "id-badge"
 ---
 
-For an added layer of security, verify the identity of the user to prevent your customers from impersonating each other. This is optional but encouraged.
+For an added layer of security, verify the identity of the user sending a message through the chat widget to prevent your customers from manually changing their email in the frontend to impersonate each other.
 
-1. Visit the In-App Chat tab on the Workflows page (app.usepylon.com/workflows) and scroll down to the Identity Verification section. Generate a Secret key. Copy this and save it, this will be the only time you will see this key.
+This is optional but encouraged.
 
-1. On your backend, hash the user's email address using HMAC-SHA256 with the secret you just generated. Here are some code snippets to help:
+<Steps>
+  <Step title="Generate an Identity Secret">
+Generate it [here](https://app.usepylon.com/workflows/in-app-chat) and save it, this will be the only time you will see this key.
+
+If you lose your key you'll need to regenerate it and replace the key later.
+  </Step>
+    <Step title="Setup Backend">
+    In your backend, hash the user's email address using HMAC-SHA256 with the secret you just generated. 
+    
+    Here are some code snippets to help:
 
 <CodeGroup>
 
@@ -58,11 +67,15 @@ func SignMessageWithHMAC(message, secret string) (*string, error) {
 ```
 
 </CodeGroup>
+  </Step>
 
-3. Send this hash to the Frontend and set it on the window object:
-
-```
+  <Step>
+  Send this hash to the Frontend and set it on the window object:
+```js
 window.pylon.chat_settings.email_hash = HMAC_HASH
 ```
+  </Step>
+</Steps>
+
 
 Now the user is verified when they open the chat!
