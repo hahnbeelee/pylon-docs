@@ -13,48 +13,79 @@ icon: "hammer"
 
 <Steps>
   <Step title="Getting Started">
-Visit the In-App Chat tab on the workflows page (app.usepylon.com/workflows). Copy the Embed Script and paste it into your index.html file.
+Grab your `APP_ID` [here](https://app.usepylon.com/workflows/in-app-chat).
   </Step>
-  <Step title="Setting the Window Object">
-We expose a window object for you to set information on the current logged in user. We use this information to identify and personalize which user is using the chat. The shape of the window object is as follows:
 
+    <Step title="Add Script to Body">
+Add the following `<script>` to right before the `</body>` tag in your `index.html`.
+
+Maks sure to replace the `APP_ID` with the `APP_ID` you grabbed from Step 1. 
+```markup
+<script>
+(function(){var w=window;var d=document;var c=function(){var s=d.createElement("script");s.setAttribute("type","text/javascript");s.setAttribute("async","true");s.setAttribute("src","https://widget.usepylon.com/widget/APP_ID");var s0=d.getElementsByTagName("script")[0];s0.parentNode.insertBefore(s,s0);};if(d.readyState==="complete"){c();}else if(w.addEventListener){w.addEventListener("load",c,false);}})();
+</script>
 ```
+
+  </Step>
+  <Step title="Enable the Chat Widget">
+Anywhere in your React code you can access the `window` object and set the `pylon` config.
+
+You should add this code whereever the user has already logged in and details like the User's email, name, etc. become available.
+
+```js
 window.pylon = {
   chat_settings: {
-    app_id: "APP_ID (THIS GETS AUTOFILLED)",
-    email: "CHAT_USER_EMAIL",
-    name: "CHAT_USER_NAME",
+    app_id: "APP_ID",
+    email: "USER_EMAIL",
+    name: "USER_FULL_NAME",
 
-    // Optional: if you are using Pylon's identity verification.
-    email_hash: "CHAT_USER_EMAIL_HASH",
+    // (Optional) If you have the user's profile image available through something like Auth0
+    avatar_url: "USER_PROFILE_IMAGE_URL",
 
-    // Optional: if you have the user's avatar available through something
-    // like Auth0.
-    avatar_url: "CHAT_USER_AVATAR_URL",
+    // (Optional) If you are using Pylon's identity verification
+    email_hash: "USER_EMAIL_HASH",
   },
 };
 ```
 
+Example usage in a React component:
+```js
+useEffect(() => {
+    if (user.loggedIn) {
+        window.pylon = {
+            chat_settings: {
+                app_id: APP_ID,
+                email: user.email,
+                name: user.fullName,
+                avatar_url: user.profileImgUrl,
+            },
+        };
+    }
+}, [user]);
+```
   </Step>
 
-<Step title="Configure Channels">
-  Visit the In-App Chat Workflows page again (app.usepylon.com/workflows) and
-  set the Chat Support Channel where you want messages from customers without
-  shared Slack channels to go. We recommend creating a new channel
-  `#chat-support` and adding your support team here.
+<Step title="Setup Chat Support Alerts Channel">
+    Create a Slack channel in your workspace called `#chat-support`. 
+    
+    Note: If you make this channel private, add the Pylon bot to the channel.
+
+    Set `#chat-support` as your Chat Support Channel [here](https://app.usepylon.com/workflows/in-app-chat).
 </Step>
 
-<Step title="CSP">
-  If you have a CSP, you will need to allowlist `*.usepylon.com`,
-  `*.posthog.com`, and `*.pusher.com`. For context, we use PostHog for product
-  metrics and Pusher for sending chat messages in realtime.
+<Step title="Chat Widget Color">
+  Set the color of your chat widget [here](https://app.usepylon.com/workflows/in-app-chat).
 </Step>
 
-<Step title="Customization">
-  And last but not least, customize the brand color on the In-App Chat Workflows
-  page. Use the preview on the right to adjust it to your liking. We recommend a
-  darker shade so the white text color can be readable.
+
+<Step title="All Done" icon={check}>
+  Set the color of your chat widget [here](https://app.usepylon.com/workflows/in-app-chat).
 </Step>
 </Steps>
 
-And voila! You now have In-App Chat!
+### Content Security Policy
+
+  If you have a CSP, you will need to allowlist `*.usepylon.com`,
+  `*.posthog.com`, and `*.pusher.com`. For context, we use PostHog for product
+  metrics and Pusher for sending chat messages in realtime.
+
