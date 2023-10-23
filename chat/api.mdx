@@ -17,7 +17,7 @@ Closes the chat window.
 
 Pass in a callback function that is called when the unread message count changes. If you pass in a null callback function, the existing callback is removed.
 ```
-Intercom("onChangeUnreadMessagesCount", function(unreadCount) {
+window.Pylon("onChangeUnreadMessagesCount", function(unreadCount) {
   console.log("unread changed!", unreadCount)
 });
 ```
