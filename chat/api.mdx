@@ -15,7 +15,7 @@ Closes the chat window.
 
 ## window.Pylon("onChangeUnreadMessagesCount")
 
-Pass in a callback function that is called when the unread message count changes. If you pass in a null callback function, the existing callback is removed.
+Pass in a callback function that is called when the unread message count changes. If you pass in `null` as the callback function, the existing callback is removed.
 ```javascript
 window.Pylon("onChangeUnreadMessagesCount", function(unreadCount) {
   console.log("unread changed!", unreadCount)
